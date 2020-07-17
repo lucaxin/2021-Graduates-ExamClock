@@ -9,7 +9,7 @@
 - 使用[ONE]接口API随机获取一句话，（*内容由网友上传，有的比较辣眼睛*  )；🙈
 - 看板娘 ❤️
 
-### Demo
+### Demo https://lucaxin.github.io/2021-Graduates-ExamClock/timer.html
 
 祝大家都有一个好成绩！
 
