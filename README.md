@@ -12,7 +12,7 @@
 ### Demo https://lucaxin.github.io/2021-Graduates-ExamClock/timer.html
 
 ### Bug
-手机预览显示错位，体验效果极差！💢 :(
+手机预览显示错位，体验效果极差！🤬 :(
 
 
 祝大家都有一个好成绩！
