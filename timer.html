@@ -12,7 +12,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
         <title>考研倒计时显示</title>
         <style>
             body, .item::before{
@@ -32,19 +35,20 @@
             h1{
                 font-size: 400%;
                 font-weight: 400;
+                font-family: 'Ma Shan Zheng', cursive;
                 color: #000;
             }
 
             .timer{
                 font-size: 260%;
-                font-family: Verdana;
+                font-family: 'Knewave', cursive;
                 line-height: 1.5;
                 margin: 1em 0;
                 color: #000;
             }
 
             .timer b{
-                color: #52616a;
+                color: #000;
             }
 
             .item{
@@ -59,8 +63,8 @@
                 text-align: center;
                 padding: 40px;
                 border-radius: 5px;
-                box-shadow: 0 0 2px 1px #404146;       
-                color: #fff;
+                box-shadow: 0 1px 3px 1px #404146;       
+                color: #f9c00c;
                 overflow: hidden;
 
             }
@@ -75,7 +79,7 @@
                 right: 0;
                 bottom: 0;
                 margin: -20px;
-                filter: blur(20px);
+                filter: blur(100px);
             }
 
             .div_foot{
@@ -105,9 +109,9 @@
                 enable: true,
                 script: {
                   // 每空闲 10 秒钟，显示一条一言
-                  'every idle 10s': '$hitokoto$',
+                  //'every idle 10s': '$hitokoto$',
                   // 当触摸到星星图案
-                  'hover .star': '星星在天上而你在我心里 (*/ω＼*)',
+                  //'hover .star': '星星在天上而你在我心里 (*/ω＼*)',
                   // 当触摸到角色身体
                   'tap body': '加油加油！',
                   // 当触摸到角色头部
@@ -120,10 +124,13 @@
 
         <!--毛玻璃等内容布局-->
         <div class="item">
-                <h1 align="center"><b>2021 考研倒计时</b></h1>
+                <h1 align="center"><p>2022 考研倒计时</p></h1>
                 <hr/>
                 <div class = "timer">
-                    <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
+                    <p>
+                        <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
+                    </p>
+                    
                 </div>
                 <div class="div_foot">
                     <b>
@@ -137,7 +144,7 @@
         <script language="javascript">
             function timer(){
                 window.setTimeout("timer()", 1000);                 //一秒执行一次,刷新网页显示日期
-                var examTime = new Date("2020-12-21 00:00:00");     // 2020.12.21
+                var examTime = new Date("2021-12-26 00:00:00");     // 2021.12.26
                     var t = examTime - new Date().getTime();        // 返回距 1970 年 1 月 1 日之间的毫秒数
                     var h = ~~(t / 1000 / 60 / 60 % 24);            // 小时 24 小时制
                     if (h < 10){
